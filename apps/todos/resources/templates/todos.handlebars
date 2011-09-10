@@ -1,0 +1,11 @@
+<h1>Todos</h1>
+{{#view Todos.CreateTodoView}}
+<input id="new-todo" type="text"
+       placeholder="What needs to be done?" />
+{{/view}}
+
+<!-- at the end of the file -->
+ 
+{{#collection SC.TemplateCollectionView contentBinding="Todos.todoListController" itemClassBinding="content.isDone"}}
+  {{view Todos.MarkDoneView}}
+{{/collection}}
